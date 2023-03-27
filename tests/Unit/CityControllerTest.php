@@ -3,18 +3,16 @@
 namespace Tests\Unit;
 
 use App\Http\Controllers\Api\CityController;
-use PHPUnit\Framework\TestCase;
+use App\Http\Requests\CityListRequest;
+use Tests\TestCase;
+use Mockery\MockInterface;
 
 class CityControllerTest extends TestCase
 {
-    /**
-     * A basic unit test example.
-     *
-     * @return void
-     */
-    public function test_route_get_cities()
+    public function test_route_index()
     {
         $cityController = new CityController();
-        $this->assertNotNull($cityController->index());
+        $request = new CityListRequest(['uf' => "RJ", "page"=> 1]);
+        $this->assertNotNull($cityController->index($request));
     }
 }
