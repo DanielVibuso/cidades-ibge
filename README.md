@@ -12,9 +12,10 @@
 
 - Rodar os comandos abaixo dentro da raiz do projeto:
 
-    1 - docker-compose exec app composer install<br>
-    2 - para fins de facilitar o processo, removi o .env do .gitignore<br>
-    3 - para rodar os testes basta: docker-compose exec app php artisan test<br>
+    1 - docker-compose up -d<br>
+    2 - docker-compose exec app composer install<br>
+    3 - para fins de facilitar o processo, removi o .env do .gitignore<br>
+    4 - para rodar os testes basta: docker-compose exec app php artisan test<br>
 
 
   ### uso do endpoint
